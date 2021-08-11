@@ -8,13 +8,14 @@ import { UserContext } from './contexts/UserContext';
 function App() {
   // Here we are definining where the "user" state actually exists
   const [user, setUser] = useState(null);
+  const [changeColor, setChangeColor] = useState(false);
 
   // Here we are defining what is the value provided by our context
   // We are "Providing" this value so that descendent elements can "Consume" it from the context
-  const contextValue = { user, setUser };
+  const contextValue = { user, setUser, changeColor, setChangeColor };
   return (
     <UserContext.Provider value={contextValue}>
-      <div className="App">
+      <div className={`App ${changeColor?"darkMode":"lightMode"}`}>
 
         <h1>Codelicious TODO</h1>
 

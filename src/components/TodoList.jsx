@@ -11,6 +11,7 @@ const defaultTodos = [
 
 function TodoList() {
     const [todos, setTodos] = useState(defaultTodos);
+    const { changeColor, setChangeColor } = useState(false);
 
     function deleteTodo(todo) {
         const newTodos = todos.filter(f => f.id !== todo.id);

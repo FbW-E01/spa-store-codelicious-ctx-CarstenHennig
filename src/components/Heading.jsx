@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 
 export default function Heading() {
-    const { user } = useContext(UserContext);
+    const { user, setUser, changeColor, setChangeColor} = useContext(UserContext);
 
     return (
         <div className="heading">
@@ -12,10 +12,12 @@ export default function Heading() {
             </p>
             <hr/>
             <p>Switch theme</p>
-            <select>
+            <select onChange={() => setChangeColor(!changeColor)}>
                 <option value="light">Light blue</option>
                 <option value="dark">Dark green</option>
             </select>
+            {/* <br />
+            <button onClick={() => setChangeColor(!changeColor)}>Change Color</button> */}
             <hr/>
         </div>
     );

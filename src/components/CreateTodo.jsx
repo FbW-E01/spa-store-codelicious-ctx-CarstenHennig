@@ -29,6 +29,7 @@ class CreateTodo extends React.Component {
         console.log("CreateTODO render function is running!");
         return (
             <form onSubmit={this.handleSubmit}>
+                <h4>Add new TODO</h4>
                 <input
                     type="text"
                     value={this.state.todoText}
