@@ -1,20 +1,28 @@
 .todos ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .todos li {
-    padding: 0.5em;
-    margin: 0.5em 0;
-    border: 0.1em solid;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  border: 0.1em solid;
 }
 .todos li button {
-    float: right;
-    background: #fff;
+  float: right;
+  background: #fff;
 }
 .todos li button:hover {
-    background: pink;
+  background: pink;
 }
 
-.todos li.my-todo { background: lime; }
+.todos li.my-todo {
+  background: lime;
+  color: black;
+}
+
+.list-background {
+  background: red;
+  color: whitesmoke;
+}
